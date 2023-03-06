@@ -1,0 +1,246 @@
+$main-color: #ffffff;
+$second-color: #ffffff86;
+
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: 
+        radial-gradient(ellipse farthest-corner at 20% 20%,#37a7db8f 0px, #26319762 30%),  
+        radial-gradient(ellipse farthest-corner at 90% 80%,#00aeff 0px, #333ea15e 30%),
+        radial-gradient(ellipse farthest-corner at 20% 90%,rgb(118, 49, 184) 0px, #333ea160 20%),
+        rgb(0, 153, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: $main-color;
+    font-family:'Manrope';
+    font-style: normal;
+    text-align: center;
+}
+
+
+%bubble_background{
+    position: relative;
+    background: 
+    radial-gradient(circle at 50% 50%, rgba(0, 38, 255, 0) 65%, #ffffff71 92%);
+    border-radius: 50%;
+}
+.bubble{
+    //border: 1px solid;
+    position: absolute;
+    z-index: -2;
+    width: 470px;
+    height: 470px;
+    &_A{
+        @extend %bubble_background;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+    }
+    &_B{
+        @extend %bubble_background;
+        top: 40%;
+        left: 45%;
+        width: 70%;
+        height: 70%;
+        backdrop-filter: blur(7px);
+    }
+}
+
+.text1{
+    position: absolute;
+    background-color: #ffffff1e;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    top: 86px;
+    font-weight: 600;
+    font-size: 24px;
+
+}
+.text2{
+    margin-top: 109px;
+    font-weight: 700;
+    font-size: 58px;
+}
+.text3{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 32px;
+}
+.text4{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 22px;
+}
+.text5{
+    margin-top: 109px;
+    font-weight: 500;
+    font-size: 22px;
+
+    color: $second-color;
+    &_ip{
+        color: $main-color;
+    }
+}
+.text6{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 22px;
+
+    color: $second-color;
+    &_URL{
+        color: $main-color;
+    }
+}
+.text7{
+    margin-top: 43px;
+    font-weight: 500;
+    font-size: 22px;
+
+    color: $second-color;
+}
+
+
+.animBlock{
+    margin-top: 20px;
+    //border: 1px solid;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+    &_LU{
+        //border: 1px solid;
+        background-color: #2AD3F8;
+        border-radius: 4px;
+        opacity: 0;
+        width: 28px;
+        height: 28px;
+        animation: download 3s 0.75s infinite;
+    }
+    &_LD{
+        //border: 1px solid;
+        background-color: #2AD3F8;
+        border-radius: 4px;
+        opacity: 0;
+        width: 28px;
+        height: 28px;
+        animation: download 3s 3s infinite;
+    }
+    &_RU{
+        //border: 1px solid;
+        background-color: #2AD3F8;
+        border-radius: 4px;
+        opacity: 0;
+        width: 28px;
+        height: 28px;
+        animation: download 3s 1.5s infinite;
+    }
+    &_RD{
+        //border: 1px solid;
+        background-color: #2AD3F8;
+        border-radius: 4px;
+        opacity: 0;
+        width: 28px;
+        height: 28px;
+        animation: download 3s 2.25s infinite;
+    }
+}
+@keyframes download{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0.2;
+    }
+}
+
+
+@media screen and (min-width:424px) and (max-width:768px) {
+    .bubble{
+        width: 300px;
+        height: 300px;
+    }
+    .text1{
+        border-radius: 10px;
+        top: 30px;
+        font-size: 16px;
+    
+    }
+    .text2{
+        margin-top: 0px;
+        font-size: 45px;
+    }
+    .text3{
+        margin-top: 20px;
+        font-size: 24px;
+    }
+    .text4{
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    .text5{
+        margin-top: 15px;
+        font-size: 16px;
+    }
+    .text6{
+        margin-top: 15px;
+        font-size: 16px;
+    }
+    .text7{
+        margin-top: 15px;
+        font-size: 16px;
+    }
+}
+@media screen and (min-width:320px) and (max-width:425px) {
+    .bubble{
+        width: 230px;
+        height: 230px;
+    }
+    .text1{
+        position: absolute;
+        background-color: #ffffff1e;
+        padding: 5px 10px 5px 10px;
+        border-radius: 10px;
+        top: 30px;
+        font-size: 12px;
+    
+    }
+    .text2{
+        margin-top: 30px;
+        font-size: 29px;
+    }
+    .text3{
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    .text4{
+        margin-top: 20px;
+        font-size: 11px;
+    }
+    .text5{
+        margin-top: 15px;
+        font-size: 11px;
+    }
+    .text6{
+        margin-top: 15px;
+        font-size: 11px;
+    }
+    .text7{
+        margin-top: 15px;
+        font-size: 11px;
+    }
+
+}
+@media screen and (min-height:0px) and (max-height:800px) {
+    .text1{
+        top: 20px;
+    }
+}

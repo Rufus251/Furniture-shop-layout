@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section class="operator">
+        <p>Отправка сообщения на правый Shift</p>
+        <input type="text" class="operator__input" name="" id="" placeholder="Введите текст для пользователя">
+        
+    </section>
+
+    <section class="messenger">
+
+
+        <div class="messenger__upPanel">
+
+            <!-- Верхняя панель -->
+            <div class="messenger__operatorPic">
+                
+                <img src="sources/img/operatorPic.png" alt="OperatorPicture">
+
+            </div>
+    
+            <div class="messenger__operatorOnlineCircle">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="7" cy="7" r="6" fill="#44C18D" stroke="white" stroke-width="2"/>
+                </svg>
+            </div>
+    
+            <div class="messenger__operatorName">
+                <p>
+                    Kufar support
+                </p>
+                <p class="messenger__operatorName__status">
+                    Online
+                </p>
+            </div>
+    
+            <div class="messenger__arrow__up">
+                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 9L8 2L15 9" stroke="#2881C1" stroke-width="2"/>
+                </svg>
+            </div>
+                
+            <div class="messenger__arrow__down none">
+                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.3" d="M1 1L8 8L15 1" stroke="black" stroke-width="2"/>
+                    </svg>            
+            </div>
+                
+            <div class="messenger__line none">
+                <svg width="282" height="2" viewBox="0 0 282 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 1L282 1.00002" stroke="#aaaaaaac"/>
+                </svg>                
+            
+            </div>
+
+        </div>
+
+
+
+
+        <!-- Чат -->
+        <div class="messenger__chat none" id="chat">
+            
+            <div class="messenger__chat__text" style="height: 267px;">
+
+            </div>
+
+            <div class="messenger__chat__imagePreview" style="height: 0;">
+
+            </div>
+
+        </div>
+
+
+        
+        <!-- Нижняя панель -->
+        <div class="messenger__clip none">
+            <label for="download_img">
+                <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000">
+                <path d="M9.93571 7.04665L5.39844 11.5839C4.68248 12.2999 4.68248 13.4607 5.39844 14.1766V14.1766C6.1144 14.8926 7.2752 14.8926 7.99116 14.1766L14.473 7.69483C15.9049 6.26291 15.9049 3.9413 14.473 2.50938V2.50938C13.0411 1.07746 10.7194 1.07746 9.28752 2.50938L2.80571 8.99119C0.657829 11.1391 0.657828 14.6215 2.80571 16.7694V16.7694C4.9536 18.9173 8.436 18.9173 10.5839 16.7694L15.1212 12.2321" stroke="inherit" stroke-width="1.375" stroke-linecap="round"/>
+                </svg>
+            </label>
+
+            <input type="file" class="messenger__clip__file" accept=".jpg, .jpeg, .png" name="download_img" id="download_img" multiple="true">                
+        </div>
+        <div class="messenger__text none">
+            
+            <input type="text" class="messenger__input none" placeholder="Введите сообщение...">
+
+            <!-- Отправка сообщений на клик по кнопке -->
+            <div class="messenger__send none" onclick="sendMessage('messenger__input')">
+
+                <svg width="20" height="20" class="messenger__send__btn none" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000">
+                    <path d="M12.5857 7.40644L8.87337 11.1188M8.87337 11.1188V11.1188C7.76792 12.9151 8.04034 15.2355 9.53181 16.7269L10.5197 17.7148C10.79 17.9851 10.9252 18.1203 11.0368 18.2024C11.9357 18.8641 13.2123 18.5757 13.7395 17.5918C13.805 17.4696 13.8689 17.2895 13.9967 16.9292L17.4353 7.23852C18.5517 4.09234 19.1099 2.51925 18.2914 1.70072C17.4729 0.882199 15.8998 1.44039 12.7536 2.55678L3.06296 5.9954C2.70265 6.12325 2.5225 6.18717 2.40034 6.25263C1.41648 6.7798 1.12804 8.05639 1.78968 8.95535C1.87184 9.06697 2.00701 9.20214 2.27734 9.47247L3.26519 10.4603C4.75666 11.9518 7.077 12.2242 8.87337 11.1188V11.1188Z" stroke="inherit" stroke-width="1.375" stroke-linecap="round"/>
+                </svg>                
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <script src="js/index.min.js"></script>
+</body>
+</html>

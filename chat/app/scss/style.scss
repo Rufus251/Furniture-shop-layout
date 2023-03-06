@@ -1,0 +1,293 @@
+:root{
+    --operatorBackgroundColor: #e8e8e8;
+    --operatorTextColor: #000000;
+    --operatorOnlineColor: #44C18D;
+    --operatorOfflineColor: #585858;
+    --userBackgroundColor: #2880C1;
+    --userTextColor: #FFFFFF;
+}
+
+html{
+    padding: 0;
+    margin: 0;
+}
+p{
+    margin: 0;
+}
+body{
+    background-color: #d6d6d6;
+    height: 3000px;
+}
+
+.operator{
+    //border: 1px solid;
+
+    &__input{
+        height: 20px;
+        width: 300px;
+        font-family: Manrope;
+
+    }
+}
+
+.messenger{
+    display: flex;
+    position: fixed;
+    right: 12px;
+    bottom: 12px;
+    height: 78px;
+    width: 330px;
+    border: 1px solid #aaaaaaac;
+    border-radius: 20px;
+    background-color: #ffffff;
+    // Верхняя панель
+    &__upPanel{
+        width: 330px;
+        height: 78px;
+        z-index: 10;
+        :hover{
+            cursor: pointer;
+        }
+    }
+    &__operatorPic{
+        position: absolute;
+        left: 24px;
+        top: calc(24px - 5px); //высота картинки
+    }
+    &__operatorOnlineCircle{
+        position: absolute;
+        left: 54px;
+        top: calc(48px);
+    }
+    &__operatorName{
+        position: absolute;
+        top: 22px;
+        left: 79px;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        &__status{
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 11px;
+            line-height: 15px;
+            color: #00000094;
+        }
+    }
+    &__arrow__up{
+        display: block;
+        position: absolute;
+        right: 24px;
+        top: calc(37px - 5px); 
+    }
+    &__arrow__down{
+        display: block;
+        position: absolute;
+        right: 24px;
+        top: calc(37px - 5px); 
+    }
+    &__line{
+        display: block;
+        position: absolute;
+        left: 24px;
+        top: calc(76px - 5px);
+    } 
+
+    // Чат
+    &__chat{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        overflow: auto;
+
+        top: 90px;
+        left: 24px;
+        //border: 1px solid;
+        width: 281px;
+        height: 267px;
+
+        &__text{
+            //border: 1px solid;
+            height: 267px;
+            width: 281px;
+            overflow-x: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__imagePreview{
+            //border: 1px solid;
+            height: 0px;
+            width: 281px;
+            display: grid;
+            margin-top: 7px;
+            grid-template-columns: repeat(3, 1fr);
+            bottom: 0;
+            overflow-x: auto;
+        }
+
+        &__image{
+            display: block;
+            position: relative;
+            max-height: 80px;
+            max-width: 80px;
+            img{
+                max-height: 80px;
+                max-width: 80px;
+                
+            }
+            &__remove{
+                opacity: 0;
+                display: flex;
+                position: absolute;
+                height: 20px;
+                width: 20px;
+                right: 0;
+                font-weight: bold;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                background-color: #ffffff83;
+                cursor: pointer;
+            }
+            
+        }
+        &__image:hover &__image__remove{
+                opacity: 1;
+                transition: opacity 0.22s;
+            }
+        
+
+        &__block{
+            display: block;
+            &__user{
+                align-self: flex-end;
+            }
+            &__operator{
+                align-self: flex-start;    
+            }
+        }
+
+        &__user{
+            display: block;
+            align-self: flex-end;
+            padding: 10px 16px;
+            background: var(--userBackgroundColor);
+            border-radius: 15px 15px 0px 15px;
+            font-family: Manrope;
+            font-size: 13px;
+            max-width: 200px;
+            color: #ffffff;
+            margin-top: 5px;
+            word-break: break-all;
+
+            &__image{
+                display: block;
+                margin-top: 5px;
+                max-height: 120px;
+                max-width: 200px;
+                border: 2px solid #ffffff;
+                border-radius: 6px;
+            }
+        }
+        &__support{
+            display: block;
+            align-self:flex-start;
+            padding: 10px 16px;
+            background: var(--operatorBackgroundColor);
+            border-radius: 15px 15px 15px 0px;
+            font-family: Manrope;
+            font-size: 13px;
+            max-width: 200px;
+            color: #000000;
+            margin-top: 5px;
+            word-break: break-all;
+        }
+        &__timeSupport{
+            display: block;
+            align-self:flex-start;
+            font-family: Manrope;
+            font-size: 11px;
+            color: var(--operatorOfflineColor);
+            margin: 0 10px 0 10px;
+        }
+        &__timeUser{
+            display: block;
+            align-self:flex-end;
+            font-family: Manrope;
+            font-size: 11px;
+            color: var(--operatorOfflineColor);
+            margin: 0 10px 0 10px;
+        }
+    }
+
+    // Нижняя панель
+    &__clip{
+        display: block;
+        position: absolute;
+        left: 25px;
+        top: 373px;
+        z-index: 1;
+        :hover{
+            cursor: pointer;
+            stroke: var(--userBackgroundColor);
+        }
+        transition: all .3s ease;
+        svg{
+            z-index: -1;
+        }
+        &__file{
+            opacity: 0;
+            position: absolute;
+            left: 0px;
+            width: 17px;
+            height: 20px;
+            outline: none;
+            z-index: -1;
+        }
+    }
+    &__text{
+        position: absolute;
+        display: flex;
+        background-color: var(--operatorBackgroundColor);
+        left: 58px;
+        top: 364px;
+        height: 38px;
+        width: 248px;
+        border: 1px solid;
+        border-radius: 17px;
+        align-items: center;
+    }
+    &__input{
+        display: block;
+        position: absolute;
+        left: 16px;
+        width: 180px;
+        font-family: Manrope;
+        border: 0;
+        outline: none;
+        background: var(--operatorBackgroundColor);
+    }
+    &__send{
+        display: block;
+        position: absolute;
+        margin-top: 3px;
+        left: 86%;
+        z-index: 1;
+        :hover{
+            cursor: pointer;
+            stroke: var(--userBackgroundColor);
+        }
+        transition: all .3s ease;
+        svg{
+            z-index: -1;
+        }
+    }
+}
+
+.none{
+    display: none;
+}
