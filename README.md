@@ -1,5 +1,5 @@
 # furniture
-HTML + CSS(gulp) + JS furniture shop layout <br>
+HTML + SCSS(gulp) + JS furniture shop layout <br>
 Monitor width 1920px <br>
 
 # antiddos
