@@ -5,10 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.min.css">
+
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <!-- Шрифты -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div class="index">
@@ -38,8 +46,16 @@
             </div>
     
             <div class="header__slider">
-                <img src="image/home/slide1.png" alt="">
-    
+                <div>
+                    <img src="image/home/slide1.png" alt="">
+                </div>
+                <div>
+                    <img src="image/home/post1.png" alt="">
+                </div>
+                <div>
+                    <img src="image/home/post2.png" alt="">
+                </div>
+
             </div>
     
         </div>
@@ -217,33 +233,48 @@
     
         <div class="gallery">
             <div class="gallery__btns">
-                <div class="gallery__btns__btn1">
-                    <p>
+                <button class="one gallery__btns__btn">
                         Bedroom furniture
-                    </p>
-                </div>
-                <div class="gallery__btns__activeBtn">
-                    <p>
+                </button>
+                <button class="two gallery__btns__btn activeBtn">
                         Living room furniture
-                    </p>
-                </div>
-                <div class="gallery__btns__btn3">
-                    <p>
+                </button>
+                <button class="three gallery__btns__btn">
                         Office furniture
-                    </p>
-                </div>
-                <div class="gallery__btns__btn4">
-                    <p>
+                </button>
+                <button class="four gallery__btns__btn">
                         Dining room furniture
-                    </p>
-                </div>
-                <div class="gallery__btns__btn5">
-                    <p>
+                </button>
+                <button class="five gallery__btns__btn">
                         Chair
-                    </p>
-                </div>
+                </button>
             </div>
-            <div class="gallery__photos">
+
+            <div class="gallery__photos one none">
+    
+                <div class="gallery__photos__1">
+                    <img src="image/home/gallery2.png" alt="">
+                </div>
+                
+                <div class="gallery__photos__2">
+                    <img src="image/home/gallery1.png" alt="">
+                </div>
+    
+                <div class="gallery__photos__3">
+                    <img src="image/home/gallery3.png" alt="">
+                </div>
+    
+                <div class="gallery__photos__4">
+                    <img src="image/home/gallery4.png" alt="">
+                </div>
+    
+                <div class="gallery__photos__5">
+                    <img src="image/home/gallery5.png" alt="">
+                </div>
+    
+            </div>
+
+            <div class="gallery__photos two">
     
                 <div class="gallery__photos__1">
                     <img src="image/home/gallery1.png" alt="">
@@ -258,6 +289,76 @@
                 </div>
     
                 <div class="gallery__photos__4">
+                    <img src="image/home/gallery4.png" alt="">
+                </div>
+    
+                <div class="gallery__photos__5">
+                    <img src="image/home/gallery5.png" alt="">
+                </div>
+    
+            </div>
+
+            <div class="gallery__photos three none">
+    
+                <div class="gallery__photos__4">
+                    <img src="image/home/gallery1.png" alt="">
+                </div>
+                
+                <div class="gallery__photos__2">
+                    <img src="image/home/gallery2.png" alt="">
+                </div>
+    
+                <div class="gallery__photos__3">
+                    <img src="image/home/gallery3.png" alt="">
+                </div>
+    
+                <div class="gallery__photos__1">
+                    <img src="image/home/gallery4.png" alt="">
+                </div>
+    
+                <div class="gallery__photos__5">
+                    <img src="image/home/gallery5.png" alt="">
+                </div>
+    
+            </div>
+
+            <div class="gallery__photos four none">
+                <div class="gallery__photos__5">
+                    <img src="image/home/gallery1.png" alt="">
+                </div>
+                
+                <div class="gallery__photos__2">
+                    <img src="image/home/gallery2.png" alt="">
+                </div>
+    
+                <div class="gallery__photos__3">
+                    <img src="image/home/gallery3.png" alt="">
+                </div>
+    
+                <div class="gallery__photos__4">
+                    <img src="image/home/gallery4.png" alt="">
+                </div>
+    
+                <div class="gallery__photos__1">
+                    <img src="image/home/gallery5.png" alt="">
+                </div>
+    
+            </div>
+
+            <div class="gallery__photos five none">
+                <div class="gallery__photos__3">
+                    <img src="image/home/gallery1.png" alt="">
+                </div>
+                
+                <div class="gallery__photos__4">
+                    <img src="image/home/gallery2.png" alt="">
+                </div>
+    
+                <div class="gallery__photos__1">
+                    <img src="image/home/gallery3.png" alt="">
+                </div>
+    
+                <div class="gallery__photos__2">
                     <img src="image/home/gallery4.png" alt="">
                 </div>
     
@@ -421,8 +522,14 @@
                 </p>
             </div>
         </div>
+
     </div>
 
-    <script src="js/index.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script type="text/javascript" src="js/indexSlider/indexSlider.js"></script>
+    <script type="text/javascript" src="js/index.min.js"></script>
 </body>
 </html>

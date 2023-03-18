@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlogPost</title>
+
     <link rel="stylesheet" href="css/style.min.css">
+
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
@@ -138,8 +143,45 @@
                         </ul>
                     </div>
 
-                    <div class="blog__post__post__slider">
-
+                    <div class="blog__post__post__slider slider">
+                        <div class="slider">
+                            <div class="slide">
+                                <div>
+                                    <p class="left">
+                                        Cred selfies edison bulb four dollar toast humblebrag
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="right">
+                                        Semiotics fixie four dollar toast, next level
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div>
+                                    <p class="left">
+                                        Cred selfies edison bulb four dollar toast humblebrag
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="right">
+                                        Cred selfies edison bulb four dollar toast humblebrag
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div>
+                                    <p class="left">
+                                        Semiotics fixie four dollar toast, next level
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="right">
+                                        Semiotics fixie four dollar toast, next level
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="blog__post__post__comments">
@@ -184,9 +226,9 @@
                         </div>
                         <div class="blog__post__post__submit__form">
                             <form action="">
-                                <textarea rows="10" cols="45" name="text" placeholder="Your comment"></textarea>
-                                <input type="text" class="blog__post__post__submit__form__name" placeholder="Your name">
-                                <input type="email" class="blog__post__post__submit__form__email" placeholder="Your e-mail">
+                                <textarea rows="10" cols="45" name="text" placeholder="Your comment" required></textarea>
+                                <input type="text" class="blog__post__post__submit__form__name" placeholder="Your name" required>
+                                <input type="email" class="blog__post__post__submit__form__email" placeholder="Your e-mail" required>
                                 <div class="blog__post__post__submit__form__checkbox">
                                     <input type="checkbox" id="checkbox">
                                     <label for="checkbox">
@@ -195,7 +237,7 @@
                                         </p>
                                     </label>
                                 </div>
-                                <input type="button" class="blog__post__post__submit__form__btn" value="Submit"> 
+                                <button class="blog__post__post__submit__form__btn">Submit</button>
                             </form>
                         </div>
                     </div>
@@ -467,6 +509,13 @@
             </p>
         </div>
     </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="js/blog__postSlider/blog__postSlider.js"></script>
+
     <script src="js/index.min.js"></script>
 </body>
 </html>

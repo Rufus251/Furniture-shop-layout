@@ -5,10 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <!-- main CSS -->
     <link rel="stylesheet" href="css/style.min.css">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div class="menu">
@@ -152,10 +159,16 @@
 
                 <div class="blog__newsline__post">
 
-                    <div class="blog__newsline__post__img">
-                        <a href="blog_post.html">
-                            <img src="image/blog/post3.png" alt="">
-                        </a>
+                    <div class="blog__newsline__post__img slider">
+                        <div>
+                                <img src="image/blog/post3.png" alt="img1">
+                        </div>
+                        <div>
+                                <img src="image/blog/post2.png" alt="img2">
+                        </div>
+                        <div>
+                                <img src="image/blog/post1.png" alt="img3">
+                        </div>
                     </div>
 
                     <div class="blog__newsline__post__data">
@@ -481,6 +494,12 @@
             </p>
         </div>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="js/blogSlider/blogSlider.js"></script>
     <script src="js/index.min.js"></script>
 </body>
 </html>
