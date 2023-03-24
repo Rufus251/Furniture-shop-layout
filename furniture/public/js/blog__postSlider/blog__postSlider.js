@@ -10,9 +10,6 @@ $(document).ready(function(){
     const sliderPrevBtn = document.querySelector('.slick-prev');
     const sliderNextBtn = document.querySelector('.slick-next');
 
-    console.log(sliderPrevBtn);
-    console.log(sliderNextBtn);
-
     sliderPrevBtn.innerHTML = '&#8249;';
     sliderNextBtn.innerHTML = '&#8250;';
 });

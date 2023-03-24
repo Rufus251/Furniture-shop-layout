@@ -196,6 +196,12 @@ body::-webkit-scrollbar-thumb {
                 li{
                     display: flex;
                     gap: 12px;
+
+                    img{
+                        margin-top: 2px;
+                        width: 15px;
+                        height: 15px;
+                    }
                 }
             }
             
@@ -1523,7 +1529,10 @@ body::-webkit-scrollbar-thumb {
                             align-items: center;
                             justify-content: center;
 
-
+                            &:hover{
+                                opacity: 0.8;
+                                cursor: pointer;
+                            }
                         }
                     }
                 }
@@ -1622,7 +1631,6 @@ body::-webkit-scrollbar-thumb {
                     color: var(--grayColor);
                 }
             
-
                 &__citate{
                     display: flex;
                     flex-direction: column;
@@ -1684,7 +1692,10 @@ body::-webkit-scrollbar-thumb {
                                 align-items: center;
                                 justify-content: center;
     
-    
+                                &:hover{
+                                    opacity: 0.8;
+                                    cursor: pointer;
+                                }
                             }
                         }
                     }
@@ -1784,7 +1795,8 @@ body::-webkit-scrollbar-thumb {
                 }
 
                 &__comments{
-                    
+                    display: flex;
+                    flex-direction: column;
                     &__header{
                         font-family: 'Montserrat', sans-serif;
                         font-size: 20px;
@@ -1800,6 +1812,10 @@ body::-webkit-scrollbar-thumb {
                         
                         position: relative;
 
+                        img{
+                            width: 64px;
+                            height: 64px;
+                        }
                         &__data{
                             
                             &__name{
@@ -1807,6 +1823,9 @@ body::-webkit-scrollbar-thumb {
                                 font-size: 16px;
                                 font-weight: 700;
                                 color: var(--blackColor);
+
+                                width: 500px;
+                                word-wrap: break-word;
                             }
                             &__time{
                                 font-family: 'Open Sans', sans-serif;
@@ -1826,7 +1845,7 @@ body::-webkit-scrollbar-thumb {
                                 color: var(--blackColor);
                             }
                         }
-                        &__reply{
+                        &__replyBtn{
                             position: absolute;
                             top: 0;
                             right: 0;
@@ -1841,7 +1860,15 @@ body::-webkit-scrollbar-thumb {
                                 opacity: 0.8;
                             }
                         }
+                        
                     }
+                    .reply{
+                        margin-left: 50px;
+                        .blog__post__post__comments__comment__data__content{
+                            width: 570px;
+                        }
+                    }
+
                 }
                 
                 &__submit{
@@ -1895,7 +1922,7 @@ body::-webkit-scrollbar-thumb {
                         }
 
                         &__checkbox{
-                            margin-top: 22px;
+                            margin-top: 15px;
                             
                             display: flex;
                             gap: 11px;
@@ -1935,6 +1962,16 @@ body::-webkit-scrollbar-thumb {
                                 opacity: 0.8;
                             }
                         }
+                    }
+
+                    #alert{
+                        margin-top: 15px;
+
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 27px;
+                        color: rgb(255, 17, 0);
                     }
                 }
             }
@@ -2077,10 +2114,15 @@ body::-webkit-scrollbar-thumb {
                             align-items: center;
                             justify-content: center;
 
-
+                            &:hover{
+                                opacity: 0.8;
+                                cursor: pointer;
+                            }
                         }
                     }
                 }
+
+                
             }
 
             &__social{

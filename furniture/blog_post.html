@@ -191,14 +191,14 @@
                         </div>
 
                         <div class="blog__post__post__comments__comment">
+
+                            
                             <div class="blog__post__post__comments__comment__img">
                                 <img src="image/blog__post/avatar.png" alt="">
                             </div>
                             <div class="blog__post__post__comments__comment__data">
                                 <div class="blog__post__post__comments__comment__data__name">
-                                    <p>
-                                        Lea Brown
-                                    </p>
+                                    <p>Lea Brown</p>
                                 </div>
                                 <div class="blog__post__post__comments__comment__data__time">
                                     <p>
@@ -211,11 +211,15 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="blog__post__post__comments__comment__reply">
+                            <div class="blog__post__post__comments__comment__replyBtn">
                                 <p>
-                                    Reply
+                                    <a href="#text">
+                                        Reply
+                                    </a>
+                                    
                                 </p>
                             </div>
+
                         </div>
 
                     </div>
@@ -226,9 +230,14 @@
                         </div>
                         <div class="blog__post__post__submit__form">
                             <form action="">
-                                <textarea rows="10" cols="45" name="text" placeholder="Your comment" required></textarea>
+                                <textarea rows="10" cols="45" name="text" id="text" placeholder="Your comment" required></textarea>
+
                                 <input type="text" class="blog__post__post__submit__form__name" placeholder="Your name" required>
+
                                 <input type="email" class="blog__post__post__submit__form__email" placeholder="Your e-mail" required>
+
+                                <p id="alert"></p>
+
                                 <div class="blog__post__post__submit__form__checkbox">
                                     <input type="checkbox" id="checkbox">
                                     <label for="checkbox">
@@ -237,7 +246,9 @@
                                         </p>
                                     </label>
                                 </div>
-                                <button class="blog__post__post__submit__form__btn">Submit</button>
+
+                                <input type="button" class="blog__post__post__submit__form__btn" value="Submit">
+
                             </form>
                         </div>
                     </div>
