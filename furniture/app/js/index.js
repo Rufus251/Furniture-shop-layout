@@ -168,6 +168,8 @@ function postComment(){
     const toSave = document.querySelector('.blog__post__post__comments').innerHTML;
     console.log(toSave);
     localStorage.setItem('chatHistory', toSave);
+
+    addEvent();
 }
 
 function addEvent(){
